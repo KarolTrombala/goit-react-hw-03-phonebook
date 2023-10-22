@@ -32,13 +32,13 @@ export class App extends Component {
 
   componentDidMount() {
     this.setState(JSON.parse(localStorage.getItem('state')));
-  }
+  };
 
-  componentDidUpdate(prevState, prevProps) {
-    if (this.state.contacts !== prevProps.contacts) {
+  componentDidUpdate(prevState) {
+    if (this.state.contacts !== prevState.contacts) {
       localStorage.setItem('state', JSON.stringify(this.state));
     }
-  }
+  };
 
   showFilteredContacts = () => {
     const { contacts, filter } = this.state;
