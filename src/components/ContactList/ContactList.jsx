@@ -34,6 +34,6 @@ export class ContactList extends Component {
 }
 
 ContactList.propTypes = {
-  contacts: PropTypes.string.isRequired,
+  contacts: PropTypes.array.isRequired,
   onClick: PropTypes.func.isRequired,
 };
