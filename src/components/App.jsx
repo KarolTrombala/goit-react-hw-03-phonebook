@@ -23,7 +23,9 @@ export class App extends Component {
 
     if (contactNames.includes(name)) {
       alert(`${name} is already in contacts`)
+      return;
     }
+    
 
     this.setState(prevState => ({
       contacts: [...prevState.contacts, { id: nanoid(), name, number }],
