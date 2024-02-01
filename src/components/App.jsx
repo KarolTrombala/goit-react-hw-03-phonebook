@@ -35,8 +35,8 @@ export class App extends Component {
   };
 
   componentDidUpdate(prevState) {
-    // if (this.state.contacts !== prevState.contacts) - wrong version
-        if (JSON.stringify(this.state.contacts) !== JSON.stringify(prevState.contacts)) {
+    if (JSON.stringify(this.state.contacts) !== JSON.stringify(prevState.contacts)) 
+    {
             localStorage.setItem('state', JSON.stringify(this.state))
         }
   };
